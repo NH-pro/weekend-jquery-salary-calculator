@@ -1,9 +1,12 @@
 $(document).ready(onReady);
 
+let monthlyCost = 0;
+
 function onReady() {
     console.log('jq is sourced');
 
     $('#submit_button').on('click', addEmployee);
+
 }
 // END 'onReady' function.
 
@@ -22,6 +25,7 @@ function addEmployee() {
            <td>${idNumber}</td>
            <td>${jobTitle}</td>
            <td>${annualSalary}</td>
+           <td> <button id="delete_emp" >Delete</button> </td>
         `);
     // Select 'employee_table' and append employee info vars in a new <tr> tag.
     
@@ -31,5 +35,21 @@ function addEmployee() {
     $('#input_job_title').val(null);
     $('#input_annual_salary').val(null);
     // Set input field values to null.
+
+    calculateMonthly();
 }
 // END 'addEmployee' function.
+
+function calculateMonthly() {
+
+    let empMonthly = ($('#input_annual_salary').val()) / 12;
+
+    monthlyCost += empMonthly;
+
+    $('#monthly_cost').empty();
+    $('#monthly_cost').append(`Total Monthly: ${monthlyCost}`);
+    
+
+
+
+}
