@@ -1,3 +1,22 @@
 body {
     background-color: lemonchiffon;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    background-color: khaki;
+}
+
+.salary_title {
+    padding: .25em;
+}
+
+.add_employee {
+    background-color: khaki;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.1em;
 }
