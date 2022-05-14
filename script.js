@@ -37,7 +37,7 @@ function addEmployee() {
            <td>${lastName}</td>
            <td>${idNumber}</td>
            <td>${jobTitle}</td>
-           <td>${annualSalary}</td>
+           <td class="salary">${annualSalary}</td>
            <td> <button id="delete_button" >Delete</button> </td>
         `);
     // Select 'employee_table' and append employee info vars in a new <tr> tag.
@@ -66,9 +66,6 @@ function calculateMonthly() {
         $('#monthly_cost').css('background-color', 'red');
         // If 'monthlyCost' is greater than 20k, back
     }
-    else {
-        $('#monthly_cost').css('background-color', 'white');
-    }
 
     $('#monthly_cost').empty();
     // Empty the value of 'monthly_cost'.
@@ -80,11 +77,32 @@ function calculateMonthly() {
 
 
 function deleteEmployee() {
-    console.log($(this));
+    console.log($(this).parent().siblings('.salary').text());
     // TEST to see what on earth I'm selecting.
+
+    let negMonthly = $(this).parent().siblings('.salary').text() / 12;
+    // This traversing is getting wild.
+    // Var = to the delete button's parent ---> the <td> tag's sibling class ---> 'salary' class <td> tag.
+    // Here we select the salary by using .text(), divide it by 12, and assign it to the var.
+
+    console.log(Math.round(negMonthly));
+    // TEST to see if the 'negMonthly' var works.
+
+    monthlyCost -= Math.round(negMonthly);
+    // Subract the removed emp monthly salary from the global monthly cost var.
+
+    $('#monthly_cost').empty();
+    // Empty the value of 'monthly_cost'.
+
+    $('#monthly_cost').append(`Total Monthly: ${monthlyCost}`);
+    // Append 'monthly_cost' with new the new value of 'monthlyCost'.
 
     $(this).parentsUntil('table').remove();
     // Selecting the delete button that was clicked and removing everything up till the parent 'table'.
 
-
+    if (monthlyCost < 20000) {
+        $('#monthly_cost').css('background-color', 'white');
+        // If monthlyCost is less than 20k, change background-color to white.
+    }
 }
+// END 'deleteEmployee' function.
