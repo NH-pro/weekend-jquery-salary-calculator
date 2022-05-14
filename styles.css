@@ -44,6 +44,7 @@ th {
 
 td {
     background-color: white;
+    padding: .25em;
 }
 
 #monthly_cost {
