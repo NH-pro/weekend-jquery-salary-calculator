@@ -5,6 +5,7 @@ let monthlyCost = 0;
 // Var for total monthly costs.
 // END global vars
 
+
 function onReady() {
     console.log('jq is sourced');
     // TEST if Jquery is sourced.
@@ -14,8 +15,7 @@ function onReady() {
 
     $(document).on('click', '#delete_button', deleteEmployee);
     // When 'delete_button' is clicked, execute 'deleteEmployee function.
-    // ---> This also keeps track of the element that started the event <---
-
+    // ---> This also keeps track of the element that started the event? <---
 }
 // END 'onReady' function.
 
@@ -27,6 +27,7 @@ function addEmployee() {
     let jobTitle = $('#input_job_title').val();
     let annualSalary = $('#input_annual_salary').val();
     // Create employee info vars and set their value = to their employee input field value.
+
     console.log(`Employee added! First:${firstName} Last:${lastName} ID:${idNumber} Title:${jobTitle} Annual Salary:${annualSalary}`);
     // Test to see if input fields are being selected correctly.
 
@@ -69,7 +70,7 @@ function calculateMonthly() {
     $('#monthly_cost').empty();
     // Empty the value of 'monthly_cost'.
 
-    $('#monthly_cost').append(`Total Monthly: ${monthlyCost}`);
+    $('#monthly_cost').append(`Total Monthly Cost: ${monthlyCost}`);
     // Append 'monthly_cost' with new value of 'monthlyCost' var.   
 }
 // END 'calculateMonthly' function.
@@ -93,7 +94,7 @@ function deleteEmployee() {
     $('#monthly_cost').empty();
     // Empty the value of 'monthly_cost'.
 
-    $('#monthly_cost').append(`Total Monthly: ${monthlyCost}`);
+    $('#monthly_cost').append(`Total Monthly Cost: ${monthlyCost}`);
     // Append 'monthly_cost' with new the new value of 'monthlyCost'.
 
     $(this).parentsUntil('table').remove();
