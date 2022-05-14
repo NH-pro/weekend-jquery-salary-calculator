@@ -13,9 +13,8 @@ function onReady() {
     // When 'submit_button' is clicked, execute 'addEmployee' function.
 
     $(document).on('click', '#delete_button', deleteEmployee);
-
-    //$('#delete_button').on('click', deleteEmployee);
     // When 'delete_button' is clicked, execute 'deleteEmployee function.
+    // ---> This also keeps track of the element that started the event <---
 
 }
 // END 'onReady' function.
