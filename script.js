@@ -101,7 +101,7 @@ function deleteEmployee() {
     // Selecting the delete button that was clicked and removing everything up till the parent 'table'.
 
     if (monthlyCost < 20000) {
-        $('#monthly_cost').css('background-color', 'white');
+        $('#monthly_cost').css('background-color', 'khaki');
         // If monthlyCost is less than 20k, change background-color to white.
     }
 }

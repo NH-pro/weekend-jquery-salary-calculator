@@ -13,10 +13,40 @@ header {
     padding: .25em;
 }
 
-.add_employee {
+.add_emp_container {
     background-color: khaki;
     padding-bottom: 1em;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.1em;
+}
+
+.table_container {
+    background-color: khaki;
+    padding: 0.1em 1em 1em 1em;
+    margin-top: 1em;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid grey;
+    padding: 2px;
+}
+
+th {
+    background-color: lightgoldenrodyellow;
+}
+
+td {
+    background-color: white;
+}
+
+#monthly_cost {
+    text-align: center;
+    background-color: khaki;
 }
