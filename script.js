@@ -11,6 +11,12 @@ function onReady() {
 
     $('#submit_button').on('click', addEmployee);
     // When 'submit_button' is clicked, execute 'addEmployee' function.
+
+    $(document).on('click', '#delete_button', deleteEmployee);
+
+    //$('#delete_button').on('click', deleteEmployee);
+    // When 'delete_button' is clicked, execute 'deleteEmployee function.
+
 }
 // END 'onReady' function.
 
@@ -32,7 +38,7 @@ function addEmployee() {
            <td>${idNumber}</td>
            <td>${jobTitle}</td>
            <td>${annualSalary}</td>
-           <td> <button id="delete_emp" >Delete</button> </td>
+           <td> <button id="delete_button" >Delete</button> </td>
         `);
     // Select 'employee_table' and append employee info vars in a new <tr> tag.
     
@@ -56,13 +62,29 @@ function calculateMonthly() {
     monthlyCost += empMonthly;
     // Sum of emp monthly cost and total monthly costs.
 
+    if (monthlyCost > 20000) {
+        $('#monthly_cost').css('background-color', 'red');
+        // If 'monthlyCost' is greater than 20k, back
+    }
+    else {
+        $('#monthly_cost').css('background-color', 'white');
+    }
+
     $('#monthly_cost').empty();
     // Empty the value of 'monthly_cost'.
 
     $('#monthly_cost').append(`Total Monthly: ${monthlyCost}`);
-    // Append 'monthly_cost' with new value of 'monthlyCost' var.
-    
+    // Append 'monthly_cost' with new value of 'monthlyCost' var.   
+}
+// END 'calculateMonthly' function.
 
+
+function deleteEmployee() {
+    console.log($(this));
+    // TEST to see what on earth I'm selecting.
+
+    $(this).parentsUntil('table').remove();
+    // Selecting the delete button that was clicked and removing everything up till the parent 'table'.
 
 
 }
