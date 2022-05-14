@@ -49,4 +49,5 @@ td {
 #monthly_cost {
     text-align: center;
     background-color: khaki;
+    padding: .25em 1em .25em 1em;
 }
