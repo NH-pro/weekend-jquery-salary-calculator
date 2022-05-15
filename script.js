@@ -70,7 +70,7 @@ function calculateMonthly() {
     $('#monthly_cost').empty();
     // Empty the value of 'monthly_cost'.
 
-    $('#monthly_cost').append(`Total Monthly Cost: ${monthlyCost}`);
+    $('#monthly_cost').append(`Total Monthly Cost: $${monthlyCost}`);
     // Append 'monthly_cost' with new value of 'monthlyCost' var.   
 }
 // END 'calculateMonthly' function.
