@@ -39,6 +39,7 @@ function addEmployee() {
            <td>${jobTitle}</td>
            <td class="salary">${annualSalary}</td>
            <td> <button id="delete_button" >Delete</button> </td>
+        </tr>
         `);
     // Select 'employee_table' and append employee info vars in a new <tr> tag.
     
