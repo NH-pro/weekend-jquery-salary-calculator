@@ -8,6 +8,7 @@ body {
 header {
     text-align: center;
     background-color: khaki;
+    border-radius: 5px;
 }
 
 .salary_title {
@@ -20,13 +21,14 @@ header {
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.1em;
+    border-radius: 5px;
 }
 
 .table_container {
     background-color: khaki;
     padding: 0.1em 1em 1em 1em;
     margin-top: 1em;
-
+    border-radius: 5px;
 }
 
 table {
@@ -52,6 +54,8 @@ td {
     text-align: center;
     background-color: khaki;
     padding: .25em 1em .25em 1em;
+    border-radius: 5px;
+
 }
 
 footer{
@@ -59,6 +63,6 @@ footer{
     text-align: center;
     max-width: fit-content;
     padding: 0.1em .5em 0.1em .5em;
-    bottom: 0;
-    position: absolute;
+    margin: 1em auto;
+    border-radius: 5px;
 }
