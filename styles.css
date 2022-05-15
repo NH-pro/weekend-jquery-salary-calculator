@@ -1,4 +1,5 @@
 body {
+    background-image: url("https://cdn.wallpapersafari.com/1/77/H2heIQ.jpg");
     background-color: lemonchiffon;
     max-width: 75%;
     margin: 0 auto;
@@ -51,4 +52,13 @@ td {
     text-align: center;
     background-color: khaki;
     padding: .25em 1em .25em 1em;
+}
+
+footer{
+    background-color: darkgoldenrod;
+    text-align: center;
+    max-width: fit-content;
+    padding: 0.1em .5em 0.1em .5em;
+    bottom: 0;
+    position: absolute;
 }
