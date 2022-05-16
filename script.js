@@ -21,6 +21,9 @@ function onReady() {
 
 
 function addEmployee() {
+    console.log('In addEmployee funciton');
+    // TEST if button is connected
+
     let firstName = $('#input_first_name').val();
     let lastName = $('#input_last_name').val();
     let idNumber = $('#input_id_number').val();
@@ -57,6 +60,9 @@ function addEmployee() {
 
 
 function calculateMonthly() {
+    console.log('In calculateMonthly function');
+    // TEST if function is connected
+
     let empMonthly = Math.round($('#input_annual_salary').val() / 12);
     // Var to store the annual salary divided by 12.
 
@@ -78,6 +84,9 @@ function calculateMonthly() {
 
 
 function deleteEmployee() {
+    console.log('In deleteEmployee function');
+    // TEST if function is connected
+
     console.log($(this).parent().siblings('.salary').text());
     // TEST to see what on earth I'm selecting.
 
