@@ -14,6 +14,7 @@ function onReady() {
     // When 'submit_button' is clicked, execute 'addEmployee' function.
 
     $(document).on('click', '#delete_button', deleteEmployee);
+    // DYNAMIC CLICK LISTENER. Used because we append our delete buttons and they don't exist when doc loads.
     // When 'delete_button' is clicked, execute 'deleteEmployee function.
     // ---> This also keeps track of the element that started the event? <---
 }
